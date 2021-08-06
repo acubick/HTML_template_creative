@@ -192,7 +192,7 @@ function watchingFiles() {
     watch('dist/*.html').on('change', browserSync.reload)
 }
 
-const dev = parallel(fonts, htmlInclude, scss2css, imageMin, svgSpriteBuild, vendors, script, copyLibs, copyFavicons)
+const dev = parallel(fonts, htmlInclude, scss2css, imageMin, svgSpriteBuild, vendors, script, copyLibs)
 
 exports.default = series(cleanFolder, dev, watchingFiles)
-exports.build = series(cleanFolder, setMode(true), dev)
+exports.build = series(cleanFolder, setMode(true), dev, copyFavicons)
