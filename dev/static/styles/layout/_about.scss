@@ -1,0 +1,136 @@
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.about_article{
+  margin-top: 23px;
+  margin-left: -3px;
+}
+
+.about_paragraph {
+  width: 100%;
+  height: auto;
+  color: #636363;
+  font-family: $openSansRegular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 10px 0;
+  padding: 5px 30px 5px 8px;
+  word-break: keep-all;
+}
+
+$tag_w: 85px;
+.company_feature {
+  height: 770px;
+  width: 70.5%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #c63104;
+  overflow: hidden;
+  img{
+    position: absolute;
+    top: -33px;
+    left: -143px;
+    opacity: 0.5;
+  }
+}
+.feature__items{
+  width: 430px;
+  height: 100%;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+
+}
+
+
+.feature_item {
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  top: -7px;
+  margin-left: -78.5%;
+}
+.feature_item:first-child{
+  margin-top: -1px;
+}
+.feature_item-title {
+  font-weight: 400;
+  line-height: 36.59px;
+  font-family: $bebasNeueBold;
+  text-transform: uppercase;
+  color: $white;
+  width: 275px;
+  position: relative;
+  margin-top: 5px;
+
+
+
+  .feature_item-title_up {
+    margin: 64px 0 5px;
+    font-size: 40px;
+    text-align: end;
+
+  }
+
+  .feature_item-title_down {
+    font-size: 25px;
+    margin-top: -4px;
+    text-align: end;
+    margin-bottom: 0;
+  }
+}
+
+.company_feature .feature_item:not(:first-child){
+  .feature_item-title:before{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: 7px;
+    background-color: $white;
+  }
+}
+
+.feature_item-tag {
+  height: $tag_w;
+  width: $tag_w;
+  min-width: $tag_w;
+  margin: 50px 20px 0;
+  border-radius: 50%;
+  border: 13px solid rgba(199, 40, 25, 0.6);
+  overflow: hidden;
+
+  i {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("#{$icons_path}icn_tag.png");
+    min-height: 30px;
+    min-width: 30px;
+
+  }
+}
+
+.feature_item-info {
+  color: $text_about;
+  font-family: $openSansRegular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 40px;
+  padding-right: 1px;
+  width: 370px;
+
+}
+
+
+
